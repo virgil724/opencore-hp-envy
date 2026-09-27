@@ -1,0 +1,13 @@
+downloads/
+backups/
+private/
+*.img
+*.iso
+*.dmg
+*.chunklist
+*.mp4
+*.png
+opencore-*.txt
+identity.plist
+config-private.plist
+__pycache__/

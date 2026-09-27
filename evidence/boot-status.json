@@ -1,0 +1,22 @@
+{
+  "status": "Ventura Recovery GUI boot confirmed on HP ENVY x360 15-cp0xxx",
+  "date": "2026-09-28",
+  "tested_build": "tested/EFI: OpenCore 1.0.7 DEBUG",
+  "changes": [
+    "EnableWriteUnprotector true",
+    "RebuildAppleMemoryMap false",
+    "SyncRuntimePermissions false",
+    "npci=0x3000"
+  ],
+  "publication": "Mac serial number, MLB, UUID, and ROM removed from public configs; generate your own identity before use",
+  "untested": [
+    "RELEASE OpenCore build boot",
+    "Full macOS installation",
+    "GPU acceleration",
+    "Audio",
+    "Networking",
+    "Battery",
+    "Sleep/wake",
+    "Physical USB port validation"
+  ]
+}

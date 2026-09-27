@@ -1,0 +1,23 @@
+{
+  "model": "HP ENVY x360 Convertible 15-cp0xxx",
+  "bios": "F.48",
+  "cpu": "Ryzen 5 2500U",
+  "physical_cores": 4,
+  "logical_threads": 8,
+  "gpu": "1002:15dd Raven Ridge",
+  "vram_bytes": 1073741824,
+  "audio": "ALC295 10ec:0295",
+  "keyboard": "PS/2",
+  "touchpad": "PS/2 Synaptics",
+  "touchscreen": "ELAN0732 PNP0C50 HID I2C",
+  "wifi": "Realtek RTL8822BE 10ec:b822 unsupported",
+  "rtc": "_SB.PCI0.SBRG.RTC0, I/O 0x70 length 2",
+  "ec": "_SB.PCI0.SBRG.EC0",
+  "cpu_objects": "_PR.P000 onwards; no CPUR replacement needed",
+  "usb_controllers": {
+    "XHC0": "_SB.PCI0.GP17.XHC0",
+    "XHC1": "_SB.PCI0.GP17.XHC1"
+  },
+  "secure_boot_at_inspection": true,
+  "macos_target": "Ventura 13.x"
+}
