@@ -10,7 +10,7 @@
   "keyboard": "PS/2",
   "touchpad": "PS/2 Synaptics",
   "touchscreen": "ELAN0732 PNP0C50 HID I2C",
-  "wifi": "Realtek RTL8822BE 10ec:b822 unsupported",
+  "wifi": "Intel AX210 8086:2725; AirportItlwm 2.3.0 Ventura configured",
   "rtc": "_SB.PCI0.SBRG.RTC0, I/O 0x70 length 2",
   "ec": "_SB.PCI0.SBRG.EC0",
   "cpu_objects": "_PR.P000 onwards; no CPUR replacement needed",
@@ -19,5 +19,7 @@
     "XHC1": "_SB.PCI0.GP17.XHC1"
   },
   "secure_boot_at_inspection": true,
-  "macos_target": "Ventura 13.x"
+  "macos_target": "Ventura 13.x",
+  "original_wifi": "Realtek RTL8822BE 10ec:b822 unsupported",
+  "bluetooth": "Intel AX210 USB 8087:0032; IntelBluetoothFirmware/IntelBTPatcher/BlueToolFixup configured"
 }

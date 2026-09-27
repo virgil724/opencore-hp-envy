@@ -6,7 +6,7 @@ Ventura Recovery successfully booted on the actual laptop on 2026-09-28 using th
 
 ## Files
 
-- `tested/EFI/`: the hardware-tested USB EFI with OpenCore 1.0.7 DEBUG binaries.
+- `tested/EFI/`: the current USB EFI with OpenCore 1.0.7 DEBUG binaries. Its base booted successfully; the new AX210/trackpad changes need a macOS test.
 - `EFI/`: matching configuration with OpenCore 1.0.7 RELEASE binaries; this variant has not been boot-tested.
 - `profiles/config-pci3000.plist`: the successful DEBUG USB configuration.
 - `profiles/config-diagnostic.plist`: equivalent DEBUG logging configuration.
@@ -28,9 +28,11 @@ This repository contains the OpenCore configuration and third-party driver binar
 
 ## Hardware support
 
+NVMeFix is disabled in the main and current USB configuration after installation failures followed by the SSD disappearing. The user reports subsequent boot success. Historical diagnostic profiles retain their original NVMeFix choices. VoodooPS2Trackpad sets both ForceTouchMode entries to 0 by user request; executables are unchanged upstream binaries.
+
 NootedRed provides the AMD graphics driver; AppleALC follows it in load order and uses `alcid=1`. VoodooPS2Controller is enabled for keyboard and Synaptics touchpad. The USB map derives from this laptop's firmware and needs physical port validation. Fake EC/USB power, USB hub reset, AMD brightness/ambient-light tables, and XOSI are included.
 
-Built-in RTL8822BE Wi-Fi and Realtek Bluetooth are unsupported by this EFI. HoRNDIS 9.2 is included for Android USB tethering; recovery network access still requires testing. Touchscreen support is disabled in the main configuration. Do not erase an existing Linux installation: dual boot needs a separately prepared macOS partition.
+The original RTL8822BE card was replaced with an Intel AX210 (Wi-Fi 8086:2725, Bluetooth 8087:0032). AirportItlwm 2.3.0 for Ventura, IntelBluetoothFirmware 2.4.0, IntelBTPatcher 2.4.0, and BlueToolFixup 2.7.2 are included; Wi-Fi and Bluetooth still require hardware tests. HoRNDIS 9.2 is included for Android USB tethering; recovery network access still requires testing. Touchscreen support is disabled in the main configuration. Do not erase an existing Linux installation: dual boot needs a separately prepared macOS partition.
 
 ## Sources
 

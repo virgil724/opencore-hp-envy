@@ -110,5 +110,26 @@
     "version": "9.2",
     "sha256": "15f5c6cbe14e5c0f11bf27172dfbcdf3b753122d128807d6bad94c8f4c2b71e1",
     "upstream_digest": null
+  },
+  {
+    "file": "AirportItlwm_v2.3.0_stable_Ventura.kext.zip",
+    "url": "https://github.com/OpenIntelWireless/itlwm/releases/download/v2.3.0/AirportItlwm_v2.3.0_stable_Ventura.kext.zip",
+    "version": "v2.3.0",
+    "sha256": "7ea19307ef9ae08991d911e6f1de59e682444e21dbcd6342b5e0a037f19c860e",
+    "upstream_digest": null
+  },
+  {
+    "file": "IntelBluetooth-v2.4.0.zip",
+    "url": "https://github.com/OpenIntelWireless/IntelBluetoothFirmware/releases/download/v2.4.0/IntelBluetooth-v2.4.0.zip",
+    "version": "v2.4.0",
+    "sha256": "78418daa11f620012fc53ba68cbd643c2642a45f2f96c594fd01aaf2bc68fe2b",
+    "upstream_digest": null
+  },
+  {
+    "file": "BrcmPatchRAM-2.7.2-RELEASE.zip",
+    "url": "https://github.com/acidanthera/BrcmPatchRAM/releases/download/2.7.2/BrcmPatchRAM-2.7.2-RELEASE.zip",
+    "version": "2.7.2",
+    "sha256": "e1c1c55347526d031a8ae2fdd1f52efa3019161e497fb38e1cfa809752f8af21",
+    "upstream_digest": "sha256:e1c1c55347526d031a8ae2fdd1f52efa3019161e497fb38e1cfa809752f8af21"
   }
 ]

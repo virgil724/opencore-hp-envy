@@ -202,7 +202,7 @@
 					<key>DisableDevice</key>
 					<false/>
 					<key>ForceTouchMode</key>
-					<integer>1</integer>
+					<integer>0</integer>
 					<key>MouseResolution</key>
 					<integer>3</integer>
 					<key>MouseSampleRate</key>

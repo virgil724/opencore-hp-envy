@@ -18,5 +18,7 @@
     "Battery",
     "Sleep/wake",
     "Physical USB port validation"
-  ]
+  ],
+  "later_user_report": "Boot success with NVMeFix disabled",
+  "current_changes": "Intel AX210 Wi-Fi and Bluetooth kexts added; ForceTouchMode=0; post-change behavior unverified"
 }
