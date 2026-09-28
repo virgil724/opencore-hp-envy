@@ -587,7 +587,7 @@
 				<key>Comment</key>
 				<string>Optional touchscreen; firmware ACPI review required</string>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/VoodooI2CServices</string>
 				<key>MaxKernel</key>
@@ -605,7 +605,7 @@
 				<key>Comment</key>
 				<string>Optional touchscreen; firmware ACPI review required</string>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/VoodooGPIO</string>
 				<key>MaxKernel</key>
@@ -641,7 +641,7 @@
 				<key>Comment</key>
 				<string>Optional ELAN HID touchscreen; enable with I2CServices, GPIO and I2CHID after firmware review</string>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/VoodooI2C</string>
 				<key>MaxKernel</key>
@@ -659,7 +659,7 @@
 				<key>Comment</key>
 				<string>Optional ELAN HID touchscreen</string>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/VoodooI2CHID</string>
 				<key>MaxKernel</key>
@@ -1897,6 +1897,14 @@
 				</data>
 				<key>prev-lang:kbd</key>
 				<string>en-US:0</string>
+				<key>bluetoothExternalDongleFailed</key>
+				<data>
+				AA==
+				</data>
+				<key>bluetoothInternalControllerInfo</key>
+				<data>
+				AAAAAAAAAAAAAAAAAAA=
+				</data>
 			</dict>
 		</dict>
 		<key>Delete</key>

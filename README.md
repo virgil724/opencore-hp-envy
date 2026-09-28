@@ -2,16 +2,16 @@
 
 Public backup for the HP ENVY x360 15-cp0xxx with Ryzen 5 2500U (4 cores / 8 threads), Raven Vega 1002:15dd, BIOS F.48, and ALC295 audio. Target: macOS Ventura 13.x / Darwin 22.x.
 
-Ventura Recovery successfully booted on the actual laptop on 2026-09-28 using the DEBUG EFI in `tested/EFI`. This confirms recovery boot and a working graphical recovery interface. Full macOS installation, GPU acceleration, audio, networking, battery and sleep remain unverified.
+Ventura Recovery and the installed Ventura desktop have booted on the actual laptop. The USB's current DEBUG EFI is backed up in `tested/EFI` with the owner's Mac identity removed. The camera appears in macOS but currently produces a black preview; GPU acceleration, audio, networking, battery, touchscreen and sleep have not been fully verified.
 
 ## Files
 
-- `tested/EFI/`: the current USB EFI with OpenCore 1.0.7 DEBUG binaries. Its base booted successfully; the new AX210/trackpad changes need a macOS test.
+- `tested/EFI/`: the current USB EFI with OpenCore 1.0.7 DEBUG binaries and sanitized Mac identity. This is the configuration backed up from the USB on 2026-09-28.
 - `EFI/`: matching configuration with OpenCore 1.0.7 RELEASE binaries; this variant has not been boot-tested.
 - `profiles/config-pci3000.plist`: the successful DEBUG USB configuration.
 - `profiles/config-diagnostic.plist`: equivalent DEBUG logging configuration.
 - `profiles/config-no-MAT.plist`: main configuration with the firmware's required memory settings.
-- `profiles/config-touchscreen.plist`: optional I2C touchscreen support; untested.
+- `profiles/config-touchscreen.plist`: touchscreen-enabled profile; the current USB now enables the same four VoodooI2C entries. Touchscreen operation remains unverified.
 - `ACPI-source/`: injected SSDT sources and compiled AML.
 - `licenses/`: upstream license texts supplied with the drivers.
 - `evidence/`: hardware details, upstream download URLs/checksums, and a concise boot verification record.
@@ -32,7 +32,7 @@ NVMeFix is disabled in the main and current USB configuration after installation
 
 NootedRed provides the AMD graphics driver; AppleALC follows it in load order and uses `alcid=1`. VoodooPS2Controller is enabled for keyboard and Synaptics touchpad. The USB map derives from this laptop's firmware and needs physical port validation. Fake EC/USB power, USB hub reset, AMD brightness/ambient-light tables, and XOSI are included.
 
-The original RTL8822BE card was replaced with an Intel AX210 (Wi-Fi 8086:2725, Bluetooth 8087:0032). AirportItlwm 2.3.0 for Ventura, IntelBluetoothFirmware 2.4.0, IntelBTPatcher 2.4.0, and BlueToolFixup 2.7.2 are included; Wi-Fi and Bluetooth still require hardware tests. HoRNDIS 9.2 is included for Android USB tethering; recovery network access still requires testing. Touchscreen support is disabled in the main configuration. Do not erase an existing Linux installation: dual boot needs a separately prepared macOS partition.
+The original RTL8822BE card was replaced with an Intel AX210 (Wi-Fi 8086:2725, Bluetooth 8087:0032). AirportItlwm 2.3.0 for Ventura, IntelBluetoothFirmware 2.4.0, IntelBTPatcher 2.4.0, and BlueToolFixup 2.7.2 are included. The current USB also sets BlueToolFixup's required zero-valued Bluetooth NVRAM keys. Wi-Fi and Bluetooth still require hardware tests. HoRNDIS 9.2 is included for Android USB tethering. The current USB enables VoodooI2CServices, VoodooGPIO, VoodooI2C and VoodooI2CHID for the ELAN touchscreen, but touch input is unverified. Do not erase an existing Linux installation: dual boot needs a separately prepared macOS partition.
 
 ## Sources
 
