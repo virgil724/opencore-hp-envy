@@ -10,7 +10,6 @@
   ],
   "publication": "Mac serial number, MLB, UUID, and ROM removed from public configs; generate your own identity before use",
   "untested": [
-    "RELEASE OpenCore build boot",
     "Full macOS installation",
     "GPU acceleration",
     "Audio",
@@ -20,5 +19,18 @@
     "Physical USB port validation"
   ],
   "later_user_report": "Boot success with NVMeFix disabled",
-  "current_changes": "Intel AX210 Wi-Fi and Bluetooth kexts added; ForceTouchMode=0; post-change behavior unverified"
+  "current_changes": "Intel AX210 Wi-Fi and Bluetooth kexts added; ForceTouchMode=0; post-change behavior unverified",
+  "release_boot": {
+    "date": "2026-09-29",
+    "result": "OpenCore 1.0.7 RELEASE (tested/EFI) boots the installed macOS Ventura 13.7.8 (22H730)",
+    "boot_args": "alcid=1 npci=0x3000 uvcfixdelay=60"
+  },
+  "camera": {
+    "date": "2026-09-29",
+    "device": "HP Wide Vision FHD Camera, Chicony 04f2:b634, bcdUVC 0x0150",
+    "stock_behavior": "UVCAssistant GET_CUR VS_PROBE fails with kIOReturnOverrun (0xe00002e8); 0 frames",
+    "fix": "UVC15Fix.kext (https://github.com/virgil724/UVC15Fix), route delayed 60 s after boot",
+    "result": "AVFoundation capture received 1920x1080 frames; Photo Booth shows video",
+    "note": "Routing during early boot (uvcfixdelay=0, earlier build) caused a hard reset after IONVMeController::start"
+  }
 }
